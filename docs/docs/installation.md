@@ -16,7 +16,7 @@ If you want to install the checkout as a demo or just try it out, install it dir
 
     b. Via composer
 
-        composer config repositories.hyva-themes/magento2-react-checkout git git@github.com:hyva-themes/magento2-react-checkout.git
+        composer config repositories.hyva-themes/magento2-react-checkout git git@github.com:friends-of-hyva/magento2-react-checkout.git
 
         composer require hyva-themes/magento2-react-checkout
 
@@ -80,7 +80,7 @@ npm --prefix app/design/frontend/Hyva/custom/web/tailwind/ run build-prod
 ```
 
 !!! Note "For Hyva_CheckoutExample template users"
-    If you are using the [**Hyva_CheckoutExample**](https://github.com/hyva-themes/magento2-checkout-example) template for customizing Hyvä React Checkout, then you are required to include the React components in that module too in the above purge list.
+    If you are using the [**Hyva_CheckoutExample**](https://github.com/friends-of-hyva/magento2-react-checkout-example) template for customizing Hyvä React Checkout, then you are required to include the React components in that module too in the above purge list.
 
 With these changes in place, Hyvä React Checkout styles will be also considered by your theme and thus you will see a stylized checkout page in your store.
 
@@ -128,7 +128,7 @@ After this, you would be able to see your checkout when you navigate to `[store-
 
 In almost all cases, you need to customize the checkout. When it comes to customizing Hyvä React Checkout, you can basically have three approaches. You should opt one of the approaches given below which best suits your needs.
 
-- The recommended way of customizing Hvyä Checkout would be using the [**Magento2 Checkout Example Template**](https://github.com/hyva-themes/magento2-checkout-example). In this approach, you are keeping the Hyvä React Checkout as a composer dependency and never touches it. The customization is done via another module which you setup at `app/code/` directory using the template given above. In a nutshell, this template includes a custom webpack configuration which enables you to copy over the React Components you really need to alter. This way, the customization will be kept differently and thus eventually it would be easy for you to upgrade Hyvä React Checkout and adopt the changes into your customization if needed.
+- The recommended way of customizing Hvyä Checkout would be using the [**Magento2 Checkout Example Template**](https://github.com/friends-of-hyva/magento2-react-checkout-example). In this approach, you are keeping the Hyvä React Checkout as a composer dependency and never touches it. The customization is done via another module which you setup at `app/code/` directory using the template given above. In a nutshell, this template includes a custom webpack configuration which enables you to copy over the React Components you really need to alter. This way, the customization will be kept differently and thus eventually it would be easy for you to upgrade Hyvä React Checkout and adopt the changes into your customization if needed.
 
 - The second approach would be to fork the original Hyvä React Checkout repository and use the forked version in your site. This way, you can keep and versioning the customization you are making in that forked repository.
 

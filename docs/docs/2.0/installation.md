@@ -7,7 +7,7 @@ Below provides the minimal steps to launch the react app embedded in Hyvä Check
 1. Clone the repository
 
 
-        git clone git@github.com:hyva-themes/magento2-react-checkout.git hyva-checkout
+        git clone git@github.com:friends-of-hyva/magento2-react-checkout.git hyva-checkout
 
 2. Switch to 2.0 branch
 
@@ -55,7 +55,7 @@ To add custom payment renderer, you need to follow the instructions provided in 
 ```
 "config": {
     "paymentMethodsRepo": {
-        "payone": "git@github.com:hyva-themes/magento2-hyva-checkout-payone.git"
+        "payone": "git@github.com:friends-of-hyva/magento2-react-checkout-payone.git"
     }
 },
 ```
