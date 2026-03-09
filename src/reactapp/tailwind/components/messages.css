@@ -1,24 +1,28 @@
 .page.messages {
-    @apply sticky z-10;
-    top: 0px;
+  @apply sticky top-0 z-10;
 }
+
 section#messages {
-    .message {
-        &.error {
-            @apply bg-red-500;
-        }
 
-        &.success {
-            @apply bg-green-500;
-        }
+  .message {
+    @apply px-4 py-3 text-white rounded-md shadow-md;
 
-        &.warning,
-        &.notice {
-            @apply bg-yellow-500;
-        }
+    &.error {
+      @apply bg-red-600;
     }
 
-    a {
-        @apply underline
+    &.success {
+      @apply bg-emerald-600;
     }
+
+    &.warning,
+    &.notice {
+      @apply text-black bg-amber-500;
+    }
+  }
+
+  a {
+    @apply underline;
+  }
+
 }

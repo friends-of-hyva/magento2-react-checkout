@@ -1,8 +1,5 @@
-
-/* purgecss start ignore */
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-/* purgecss end ignore */
+@import "tailwindcss";
+@import "../tailwind/theme.css";
 
 @import url(../tailwind/components/forms.css);
 @import url(../tailwind/components/messages.css);
@@ -10,4 +7,9 @@
 @import url(../tailwind/components/modal.css);
 @import url(../tailwind/components/theming.css);
 
-@import "tailwindcss/utilities";
+/* Plugins */
+@plugin "@tailwindcss/forms";
+
+/* Tell Tailwind where to scan for class usage */
+@source "./src/**/*.{jsx}";
+@source "../view/frontend/templates/**/*.phtml";

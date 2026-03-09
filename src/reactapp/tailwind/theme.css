@@ -1,0 +1,28 @@
+@theme {
+
+  /* PRIMARY */
+  --color-primary: theme(colors.blue.800);
+  --color-primary-lighter: theme(colors.blue.300);
+  --color-primary-darker: theme(colors.blue.900);
+
+  /* SECONDARY */
+  --color-secondary: theme(colors.blue.200);
+  --color-secondary-lighter: theme(colors.blue.100);
+  --color-secondary-darker: theme(colors.blue.300);
+
+  /* BACKGROUND */
+  --color-background: theme(colors.blue.200);
+  --color-background-lighter: theme(colors.blue.100);
+  --color-background-darker: theme(colors.blue.300);
+
+  /* CONTAINER */
+  --color-container: #fafafa;
+  --color-container-lighter: #ffffff;
+  --color-container-darker: #f5f5f5;
+
+  /* BORDER CONTAINER */
+  --color-border-container: #e7e7e7;
+  --color-border-container-lighter: #f5f5f5;
+  --color-border-container-darker: #b6b6b6;
+
+}

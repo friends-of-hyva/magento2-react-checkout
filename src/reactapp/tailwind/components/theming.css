@@ -1,45 +1,43 @@
 body {
-    @apply bg-container;
+  @apply bg-container text-primary;
 }
 
 #cart-drawer {
-    @apply text-black;
+  @apply text-primary;
 }
 
 [x-cloak] {
-    display: none;
+  display: none;
 }
+
+/* INPUT */
 
 .input {
-    @apply w-auto rounded mr-2 border text-base py-2 px-4;
+  @apply w-auto px-4 py-2 mr-2 text-base border rounded border-border-container bg-container text-primary;
 
-    @screen md {
-        @apply mr-4;
-    }
-
-    @screen lg {
-        @apply mr-0;
-    }
-
-    @screen xl {
-        @apply mr-4;
-    }
-
-    &-light {
-        @apply bg-white border-gray-400;
-
-        &:focus {
-            @apply outline-none border-primary;
-        }
-    }
+  @apply md:mr-4;
+  @apply lg:mr-0;
+  @apply xl:mr-4;
 }
+
+.input-light {
+  @apply bg-container-lighter border-border-container;
+
+  &:focus {
+    @apply outline-none border-primary ring ring-primary/30;
+  }
+}
+
+/* CARD */
 
 .card {
-    @apply p-4 rounded-sm bg-container-lighter shadow;
+  @apply p-4 rounded-sm shadow bg-container-lighter;
 }
 
-.card-interactive {
-    &:hover {
-        @apply bg-container;
-    }
+.card-interactive:hover {
+  @apply bg-container;
+}
+
+.focus-ring {
+  @apply focus:outline-none focus:ring focus:ring-primary/30;
 }

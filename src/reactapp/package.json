@@ -1,5 +1,5 @@
 {
-  "name": "vite-hyva-checkout",
+  "name": "friends-of-hyva-react-checkout-vite",
   "author": "Hyvä Themes BV",
   "license": "BSD-3-Clause",
   "scripts": {
@@ -14,44 +14,44 @@
     "themeRepositories": "Add your themes here"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "airbnb",
+      "airbnb/hooks",
+      "prettier"
+    ]
   },
   "dependencies": {
-    "@optimize-lodash/rollup-plugin": "^4.0.3",
-    "@vitejs/plugin-react": "^4.0.0",
+    "@optimize-lodash/rollup-plugin": "^5.0.0",
+    "@vitejs/plugin-react": "^5.1.4",
     "babel-plugin-lodash": "^3.3.4",
-    "formik": "^2.2.9",
+    "formik": "^2.4.6",
     "lodash-es": "^4.17.21",
     "lucide-react": "^0.577.0",
-    "preact": "^10.15.0",
+    "preact": "^10.26.4",
     "prop-types": "^15.8.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "vite": "^4.3.8",
-    "yup": "^1.2.0"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "rollup-plugin-visualizer": "^7.0.1",
+    "vite": "^7.3.0",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.21.5",
-    "@babel/eslint-parser": "^7.21.8",
-    "@babel/preset-env": "^7.21.5",
-    "@babel/preset-react": "^7.18.6",
-    "@rollup/plugin-alias": "^5.0.0",
-    "@tailwindcss/forms": "^0.5.3",
-    "@tailwindcss/typography": "^0.5.9",
-    "autoprefixer": "^10.4.14",
-    "eslint": "^8.41.0",
+    "@babel/cli": "^7.26.0",
+    "@babel/eslint-parser": "^7.28.6",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-react": "^7.25.9",
+    "@rollup/plugin-alias": "^5.1.0",
+    "@tailwindcss/forms": "^0.5.10",
+    "@tailwindcss/typography": "^0.5.15",
+    "eslint": "^8.2.0",
     "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-prettier": "^8.8.0",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-jsx-a11y": "^6.7.1",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-react": "^7.32.2",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "postcss": "^8.4.23",
-    "postcss-cli": "^10.1.0",
-    "postcss-import": "^15.1.0",
-    "prettier": "^2.8.8",
-    "rollup-plugin-visualizer": "^5.9.0",
-    "tailwindcss": "^3.3.2"
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jsx-a11y": "^6.9.0",
+    "eslint-plugin-prettier": "^5.2.0",
+    "eslint-plugin-react": "^7.37.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "prettier": "^3.3.3",
+    "tailwindcss": "^4.1.0"
   }
 }

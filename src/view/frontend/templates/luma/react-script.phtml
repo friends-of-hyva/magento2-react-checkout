@@ -20,6 +20,7 @@ $buildJsFile = 'FriendsOfHyva_ReactCheckout::js/react-checkout.js';
 
         newScript.async = true;
         newScript.defer = true;
+        newScript.type = 'module';
         newScript.src = '<?= $escaper->escapeUrl($block->getViewFileUrl($buildJsFile)); ?>';
 
         firstScript.parentNode.insertBefore(newScript, firstScript);

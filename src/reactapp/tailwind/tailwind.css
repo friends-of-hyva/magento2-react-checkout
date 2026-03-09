@@ -1,10 +1,18 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
+@import "tailwindcss";
 
-@import url(components/forms.css);
-@import url(components/messages.css);
-@import url(components/button.css);
-@import url(components/modal.css);
-@import url(components/theming.css);
+/* Tell Tailwind where to scan for class usage */
+@source "./src/**/*.{jsx}";
+@source "../view/frontend/templates/**/*.phtml";
 
-@import "tailwindcss/utilities";
+/* Plugins */
+@plugin "@tailwindcss/forms";
+
+/* Theme tokens */
+@import "./theme.css";
+
+/* Components */
+@import url(../tailwind/components/forms.css);
+@import url(../tailwind/components/messages.css);
+@import url(../tailwind/components/button.css);
+@import url(../tailwind/components/modal.css);
+@import url(../tailwind/components/theming.css);

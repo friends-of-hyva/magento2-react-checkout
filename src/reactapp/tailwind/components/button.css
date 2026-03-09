@@ -1,45 +1,48 @@
 .btn {
-    @apply flex bg-gray-500 rounded-lg px-4 py-1 text-white text-base font-medium shadow-md items-center;
+  @apply flex items-center px-4 py-1 text-base font-medium text-white rounded-lg shadow-md bg-secondary;
 
-    @screen md {
-        @apply px-6 text-lg;
-    }
-    @screen xl {
-        @apply py-2 text-base;
-    }
+  @apply md:px-6 md:text-lg;
+  @apply xl:py-2 xl:text-base;
 
-    svg {
-        @apply inline-flex;
-    }
-    span {
-        vertical-align: middle;
-    }
+  svg {
+    @apply inline-flex;
+  }
 
-    &:hover {
-        @apply bg-gray-600;
-    }
+  span {
+    vertical-align: middle;
+  }
+
+  &:hover {
+    @apply bg-secondary-darker;
+  }
 }
+
+/* PRIMARY BUTTON */
 
 .btn-primary {
-    @apply bg-primary border-2 border-primary-darker text-white shadow-md;
+  @apply text-white border-2 shadow-md bg-primary border-primary-darker;
 
-    &:hover {
-        @apply bg-primary-lighter border-primary text-white shadow-lg;
-    }
+  &:hover {
+    @apply shadow-lg bg-primary-darker border-primary-darker;
+  }
 }
+
+/* SECONDARY BUTTON */
 
 .btn-secondary {
-    @apply bg-white border-2 border-primary-lighter text-black shadow-md;
+  @apply border-2 shadow-md bg-container border-primary-lighter text-primary;
 
-    &:hover {
-        @apply bg-white border-primary-darker shadow-lg;
-    }
+  &:hover {
+    @apply shadow-lg border-primary;
+  }
 }
 
+/* SIZE VARIANTS */
+
 .btn-size-lg {
-    @apply px-10 py-4 text-lg;
+  @apply px-10 py-4 text-lg;
 }
 
 .btn-size-sm {
-    @apply py-2 px-2 text-sm;
+  @apply px-2 py-2 text-sm;
 }
