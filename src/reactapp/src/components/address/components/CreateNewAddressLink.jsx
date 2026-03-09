@@ -1,6 +1,6 @@
 import React from 'react';
 import { bool, func, shape } from 'prop-types';
-import { PlusIcon } from '@heroicons/react/24/solid';
+import { PlusIcon } from 'lucide-react';
 
 import Button from '../../common/Button';
 import { __ } from '../../../i18n';

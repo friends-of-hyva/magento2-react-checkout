@@ -1,7 +1,7 @@
 import React from 'react';
 import { get as _get } from 'lodash-es';
 import { bool, func, shape, string } from 'prop-types';
-import { ArrowPathIcon } from '@heroicons/react/24/solid';
+import { RefreshCcwIcon } from 'lucide-react';
 
 import Button from '../../common/Button';
 import TextInput from '../../common/Form/TextInput';
@@ -64,7 +64,7 @@ function CartItem({ item, isLastItem, actions }) {
           click={itemUpdateHandler}
           disable={!isQtyFieldTouched}
         >
-          <ArrowPathIcon className="w-5 h-5 text-black" />
+          <RefreshCcwIcon className="w-5 h-5 text-black" />
           <span className="sr-only">{__('Update')}</span>
         </Button>
       </td>
@@ -136,7 +136,7 @@ function CartItem({ item, isLastItem, actions }) {
                               click={itemUpdateHandler}
                               disable={!isQtyFieldTouched}
                             >
-                              <ArrowPathIcon className="w-5 h-5 text-black" />
+                              <RefreshCcwIcon className="w-5 h-5 text-black" />
                               <span className="sr-only">{__('Update')}</span>
                             </Button>
                           </div>
