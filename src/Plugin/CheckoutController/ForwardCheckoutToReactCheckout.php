@@ -1,15 +1,15 @@
 <?php
 declare(strict_types=1);
 
-namespace Hyva\ReactCheckout\Plugin\CheckoutController;
+namespace FriendsOfHyva\ReactCheckout\Plugin\CheckoutController;
 
-use Hyva\ReactCheckout\Config\Checkout;
+use FriendsOfHyva\ReactCheckout\Config\Checkout;
 use Magento\Framework\Controller\ResultInterface;
 use Magento\Framework\Controller\ResultFactory;
 use Magento\Framework\Controller\Result\Forward;
 use Magento\Checkout\Controller\Index\Index as CheckoutIndex;
 
-class Index
+class ForwardCheckoutToReactCheckout
 {
     /**
      * @var ResultFactory
@@ -49,7 +49,7 @@ class Index
             /** @var Forward $resultForward */
             $resultForward = $this->resultFactory->create(ResultFactory::TYPE_FORWARD);
             $result = $resultForward
-                ->setModule('hyva')
+                ->setModule('hyvareactcheckout')
                 ->setController('reactcheckout')
                 ->forward('index');
         } else {

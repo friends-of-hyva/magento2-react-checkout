@@ -24,7 +24,7 @@
       "src/registration.php"
     ],
     "psr-4": {
-      "Hyva\\ReactCheckout\\": "src/"
+      "FriendsOfHyva\\ReactCheckout\\": "src/"
     }
   }
 }

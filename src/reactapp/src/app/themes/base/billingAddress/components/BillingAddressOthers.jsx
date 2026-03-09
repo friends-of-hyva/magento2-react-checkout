@@ -1,6 +1,6 @@
 import React from 'react';
 import { bool } from 'prop-types';
-import { DocumentIcon } from '@heroicons/react/24/solid';
+import { FileIcon } from 'lucide-react';
 
 import AddressOptions from '../../address/components/AddressOptions';
 import {
@@ -77,7 +77,7 @@ function BillingAddressOthers({ forceHide }) {
 
   const submitButtonLabel = (
     <>
-      <DocumentIcon className="w-6 h-6 pr-1" />
+      <FileIcon className="w-6 h-6 pr-1" />
       <span className="text-xs">{__('Bill Here')}</span>
     </>
   );

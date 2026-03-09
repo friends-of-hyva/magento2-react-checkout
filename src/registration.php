@@ -6,4 +6,4 @@
 
 use Magento\Framework\Component\ComponentRegistrar;
 
-ComponentRegistrar::register(ComponentRegistrar::MODULE, 'Hyva_ReactCheckout', __DIR__);
+ComponentRegistrar::register(ComponentRegistrar::MODULE, 'FriendsOfHyva_ReactCheckout', __DIR__);

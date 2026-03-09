@@ -1,12 +1,12 @@
 <?php
 declare(strict_types=1);
 
-namespace Hyva\ReactCheckout\Plugin\CustomerController;
+namespace FriendsOfHyva\ReactCheckout\Plugin\CustomerController;
 
-use Hyva\ReactCheckout\Config\Checkout as HyvaCheckoutConfig;
-use Hyva\ReactCheckout\Model\LoginSectionDataServiceFactory;
+use FriendsOfHyva\ReactCheckout\Config\Checkout as FriendsOfHyvaCheckoutConfig;
+use FriendsOfHyva\ReactCheckout\Model\LoginSectionDataServiceFactory;
 use Magento\Customer\Controller\Ajax\Login as CustomerAjaxLoginController;
-use Hyva\ReactCheckout\Result\Json as JsonResult;
+use FriendsOfHyva\ReactCheckout\Result\Json as JsonResult;
 use Magento\Framework\Controller\ResultInterface;
 use Psr\Log\LoggerInterface;
 
@@ -19,7 +19,7 @@ use Psr\Log\LoggerInterface;
 class AjaxLogin
 {
     /**
-     * @var \Hyva\ReactCheckout\Config\Checkout
+     * @var \FriendsOfHyva\ReactCheckout\Config\Checkout
      */
     private $hyvaCheckoutConfig;
 
@@ -29,7 +29,7 @@ class AjaxLogin
     private $logger;
 
     /**
-     * @var \Hyva\ReactCheckout\Model\LoginSectionDataServiceFactory
+     * @var \FriendsOfHyva\ReactCheckout\Model\LoginSectionDataServiceFactory
      */
     private $loginSectionDataServiceFactory;
 
@@ -37,7 +37,7 @@ class AjaxLogin
      * AjaxLogin constructor.
      *
      * @param  \Psr\Log\LoggerInterface  $logger
-     * @param  \Hyva\ReactCheckout\Config\Checkout  $hyvaCheckoutConfig
+     * @param  \FriendsOfHyva\ReactCheckout\Config\Checkout  $hyvaCheckoutConfig
      * @param  LoginSectionDataServiceFactory  $loginSectionDataServiceFactory
      */
     public function __construct(
@@ -71,7 +71,7 @@ class AjaxLogin
         }
 
         try {
-            /** @var \Hyva\ReactCheckout\Model\LoginSectionDataService $sectionDataService */
+            /** @var \FriendsOfHyva\ReactCheckout\Model\LoginSectionDataService $sectionDataService */
             $sectionDataService = $this->loginSectionDataServiceFactory->create();
             $response = $result->getData();
             $response['customerData'] = $sectionDataService->getSectionData();
@@ -105,7 +105,7 @@ class AjaxLogin
     }
 
     /**
-     * @param  \Hyva\ReactCheckout\Result\Json  $result
+     * @param  \FriendsOfHyva\ReactCheckout\Result\Json  $result
      * @return bool
      */
     private function isErrorResponse(JsonResult $result): bool

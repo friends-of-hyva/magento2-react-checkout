@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Hyva\ReactCheckout\Observer;
+namespace FriendsOfHyva\ReactCheckout\Observer;
 
 use Exception;
 use Magento\Checkout\Model\Session as CheckoutSession;

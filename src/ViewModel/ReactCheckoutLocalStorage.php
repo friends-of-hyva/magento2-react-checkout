@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Hyva\ReactCheckout\ViewModel;
+namespace FriendsOfHyva\ReactCheckout\ViewModel;
 
 use Magento\Checkout\Model\Session as CheckoutSession;
 use Magento\Customer\Model\Address;
@@ -49,6 +49,7 @@ class ReactCheckoutLocalStorage implements ArgumentInterface
     {
         $config = [
             'customerIsLoggedIn' => $this->isCustomerLoggedIn(),
+            'isBillingSameAsShipping' => $this->isAddressSame(),
             'quoteContainsBilling' => $this->hasQuoteContainsValidBillingAddress(),
             'quoteContainsShipping' => $this->hasQuoteContainsValidShippingAddress(),
             'defaultBillingAddressId' => $this->getCustomerDefaultBillingAddressId(),
@@ -129,5 +130,10 @@ class ReactCheckoutLocalStorage implements ArgumentInterface
     private function getCustomer(): Customer
     {
         return $this->customerSession->getCustomer();
+    }
+
+    private function isAddressSame(): bool
+    {
+        return (bool) $this->checkoutSession->getQuote()->getShippingAddress()->getSameAsBilling();
     }
 }

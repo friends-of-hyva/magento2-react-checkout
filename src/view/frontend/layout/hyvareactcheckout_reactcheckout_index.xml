@@ -8,13 +8,13 @@
         <remove src="css/print.css" />
         <remove src="mage/calendar.css"/>
         <remove src="requirejs/require.js"/>
-        <css src="Hyva_ReactCheckout::css/styles.css" defer="defer" />
+        <css src="FriendsOfHyva_ReactCheckout::css/styles.css" defer="defer" />
     </head>
     <body>
         <referenceContainer name="content">
-            <block class="Hyva\ReactCheckout\Block\CheckoutTranslator"
+            <block class="FriendsOfHyva\ReactCheckout\Block\CheckoutTranslator"
                    name="checkout.translations"
-                   template="Hyva_ReactCheckout::translation.phtml">
+                   template="FriendsOfHyva_ReactCheckout::translation.phtml">
                 <arguments>
                     <argument name="checkout_translations" xsi:type="array">
                         <!--
@@ -27,38 +27,50 @@
                             <![CDATA[-- Please Select --,%1 zipcode: %1,%1 is required,Actions,Address update failed. Please try again.,Bill Here,Billing address made same as shipping address,Billing address update failed. Please try again.,Billing address updated successfully.,BILLING ADDRESS,Billing Information,Cancel,Cart Subtotal,Cart updated successfully.,Checkout Agreements,CHOOSE FROM THE ADDRESS LIST,City,Company,Country,Edit,Email address is saved.,Email address update failed. Please try again.,Email is invalid,Email is required,Email,First name,FROM ADDRESS BOOK,I agree,I will sign-in and checkout,Item,Last name,Login failed.,MOST RECENTLY USED,New Address,NEW ADDRESS,No cart items available,No payment methods available at the moment,No shipping methods available at the moment,Order Summary,Order Total,OTHER ADDRESSES,Password is required,Password,Payment method added successfully.,Payment method not available,Payment Methods,phone: %1,Phone,Place Order,Please agree with the terms & conditions,Please provide your billing address information.,Please provide your email address.,Please provide your login details.,Please provide your shipping address information.,Please select your payment method.,Please select your shipping method.,Postal Code,Price: %1,Price,Product Details,Qty,REMOVE,Required,Save,SELECTED ADDRESS,Selected shipping method is not available due to the shipping address change. Please select from the available methods.,Ship Here,Shipping address update failed. Please try again,Shipping address updated successfully.,SHIPPING ADDRESS,Shipping Information,Shipping method not available,Shipping method updated successfully.,Shipping Methods,Shipping,Sign In,Something went wrong while adding the payment method to the quote.,Something went wrong while updating shipping method,Something went wrong while updating the cart item.,State,Street,Total,Update,Use this address as my billing address,Your checkout details are not valid. Please verify your details.,Please provide a shipping address first.,Firstname,Lastname,Street Address,Zipcode,State,Customer Information,Do you already have an account?,Do you want to continue as guest user?,john.doe@gmail.com,Loading...,Yes,+32 000 000 000,Apply Discount Code,Coupon code: %1 is applied successfully.,Coupon code: %1 is invalid.,Coupon code: %1 is removed successfully.,Enter your discount code,Remove Coupon Code,Apply Discount,Subtotal,Save in address book,Login]]>
                         </item>
                     </argument>
+                    <argument
+                        name="csp_nonce_provider"
+                        xsi:type="object">FriendsOfHyva\ReactCheckout\ViewModel\CspNonceProvider</argument>
                 </arguments>
             </block>
             <block
                 cacheable="false"
                 name="checkout.container"
-                template="Hyva_ReactCheckout::react-container.phtml"
+                template="FriendsOfHyva_ReactCheckout::react-container.phtml"
             >
                 <arguments>
                     <argument
                         name="checkout_config_provider"
-                        xsi:type="object">Hyva\ReactCheckout\ViewModel\CheckoutConfigProvider</argument>
+                        xsi:type="object">FriendsOfHyva\ReactCheckout\ViewModel\CheckoutConfigProvider</argument>
                 </arguments>
             </block>
         </referenceContainer>
         <referenceContainer name="before.body.end">
             <block name="checkout.initiate.hyva-checkout-storage"
-                   template="Hyva_ReactCheckout::luma/initiate-storage.phtml"
+                   template="FriendsOfHyva_ReactCheckout::luma/initiate-storage.phtml"
                    after="-" >
                 <arguments>
                     <argument
                         name="hyva_react_checkout_localstorage"
-                        xsi:type="object">Hyva\ReactCheckout\ViewModel\ReactCheckoutLocalStorage</argument>
+                        xsi:type="object">FriendsOfHyva\ReactCheckout\ViewModel\ReactCheckoutLocalStorage</argument>
+                    <argument
+                        name="csp_nonce_provider"
+                        xsi:type="object">FriendsOfHyva\ReactCheckout\ViewModel\CspNonceProvider</argument>
                 </arguments>
             </block>
             <block name="checkout.scripts"
-                   template="Hyva_ReactCheckout::luma/react-script.phtml"
-                   after="checkout.initiate.hyva-checkout-storage" />
+                   template="FriendsOfHyva_ReactCheckout::luma/react-script.phtml"
+                   after="checkout.initiate.hyva-checkout-storage">
+                <arguments>
+                    <argument
+                        name="csp_nonce_provider"
+                        xsi:type="object">FriendsOfHyva\ReactCheckout\ViewModel\CspNonceProvider</argument>
+                </arguments>
+            </block>
         </referenceContainer>
 
-        <referenceBlock name="logo" template="Hyva_ReactCheckout::html/header/logo.phtml" />
-        <referenceBlock name="page.main.title" template="Hyva_ReactCheckout::html/title.phtml" />
-        <referenceBlock name="copyright" template="Hyva_ReactCheckout::html/copyright.phtml" />
+        <referenceBlock name="logo" template="FriendsOfHyva_ReactCheckout::html/header/logo.phtml" />
+        <referenceBlock name="page.main.title" template="FriendsOfHyva_ReactCheckout::html/title.phtml" />
+        <referenceBlock name="copyright" template="FriendsOfHyva_ReactCheckout::html/copyright.phtml" />
 
         <referenceBlock name="top.search" remove="true" />
         <referenceBlock name="minicart" remove="true" />

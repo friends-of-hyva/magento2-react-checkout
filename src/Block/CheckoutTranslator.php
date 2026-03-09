@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Hyva\ReactCheckout\Block;
+namespace FriendsOfHyva\ReactCheckout\Block;
 
 use Magento\Framework\View\Element\Template;
 

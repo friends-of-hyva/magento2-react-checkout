@@ -1,14 +1,17 @@
 <?php
 declare(strict_types=1);
 
+use FriendsOfHyva\ReactCheckout\ViewModel\CspNonceProvider;
 use Magento\Framework\Escaper;
-use Hyva\ReactCheckout\Block\CheckoutTranslator;
+use FriendsOfHyva\ReactCheckout\Block\CheckoutTranslator;
 
 /**
  * @var CheckoutTranslator $block
  * @var Escaper $escaper
+ * @var CspNonceProvider $cspNonceProvider
  */
+$cspNonceProvider = $block->getData('csp_nonce_provider');
 ?>
-<script>
+<script nonce="<?= $escaper->escapeHtml($cspNonceProvider->getNonce()) ?>">
     var CHECKOUT_TRANSLATIONS = '<?= $escaper->escapeJs($block->getTranslations())  ?>';
 </script>

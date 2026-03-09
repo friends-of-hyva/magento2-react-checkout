@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-use Hyva\ReactCheckout\ViewModel\CheckoutConfigProvider;
+use FriendsOfHyva\ReactCheckout\ViewModel\CheckoutConfigProvider;
 use Magento\Framework\Escaper;
 use Magento\Framework\View\Element\Template;
 
@@ -14,7 +14,7 @@ $configProvider = $block->getData('checkout_config_provider');
 <div
     id="react-checkout"
     data-base_url="<?= $escaper->escapeUrl($block->getBaseUrl()) ?>"
-    data-static_file_path="<?= $escaper->escapeUrl($block->getViewFileUrl('Hyva_ReactCheckout')) ?>"
+    data-static_file_path="<?= $escaper->escapeUrl($block->getViewFileUrl('FriendsOfHyva_ReactCheckout')) ?>"
     data-checkout_config="<?= $escaper->escapeHtmlAttr($configProvider->getConfig()) ?>"
 >
     <div class="container">

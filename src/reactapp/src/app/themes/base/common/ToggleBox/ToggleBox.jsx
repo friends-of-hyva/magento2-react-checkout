@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
-import {
-  ArrowSmallDownIcon,
-  ArrowSmallUpIcon,
-} from '@heroicons/react/24/outline';
 import { bool, node } from 'prop-types';
+import { ChevronDownIcon, ChevronUpIcon } from 'lucide-react';
 
 import Header from '../Header';
 
@@ -13,9 +10,9 @@ function ToggleBox({ children, title, show, small, hrLine }) {
   const arrowContent = (
     <div className="flex items-center justify-center">
       {open ? (
-        <ArrowSmallUpIcon className={small ? 'w-5 h-5' : 'w-6 h-6'} />
+        <ChevronUpIcon className={small ? 'w-5 h-5' : 'w-6 h-6'} />
       ) : (
-        <ArrowSmallDownIcon className={small ? 'w-5 h-5' : 'w-6 h-6'} />
+        <ChevronDownIcon className={small ? 'w-5 h-5' : 'w-6 h-6'} />
       )}
     </div>
   );

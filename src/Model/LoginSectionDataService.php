@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Hyva\ReactCheckout\Model;
+namespace FriendsOfHyva\ReactCheckout\Model;
 
 use Magento\Checkout\CustomerData\Cart as CartCustomerData;
 use Magento\Customer\CustomerData\Customer as CustomerCustomerData;

@@ -8,7 +8,7 @@
         <section id="hyva_react_checkout" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
             <label>React Checkout</label>
             <tab>hyva_themes</tab>
-            <resource>Hyva_ReactCheckout::config_hyva_react_checkout</resource>
+            <resource>FriendsOfHyva_ReactCheckout::config_hyva_react_checkout</resource>
             <group id="general" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
                 <label>General Settings</label>
                 <field id="enable" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10"

@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Hyva\ReactCheckout\Observer;
+namespace FriendsOfHyva\ReactCheckout\Observer;
 
 use Magento\Framework\Component\ComponentRegistrar;
 use Magento\Framework\Event\Observer;

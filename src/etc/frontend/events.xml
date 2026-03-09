@@ -2,11 +2,14 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
     <event name="hyva_config_generate_before">
-        <observer name="hyva_react_checkout_register_module_for_hyva"
-                  instance="Hyva\ReactCheckout\Observer\RegisterModuleForHyvaConfig"/>
+        <observer
+            name="FriendsOfHyva_ReactCheckout::register_module_in_hyva_config"
+            instance="FriendsOfHyva\ReactCheckout\Observer\RegisterModuleForHyvaConfig"/>
     </event>
+
     <event name="hyva_react_checkout_config">
-        <observer name="hyva_react_checkout_add_cart_info_to_checkout_config"
-                  instance="Hyva\ReactCheckout\Observer\AddCartInfoInCheckoutConfig"/>
+        <observer
+            name="FriendsOfHyva_ReactCheckout::add_cart_info_to_checkout_config"
+            instance="FriendsOfHyva\ReactCheckout\Observer\AddCartInfoInCheckoutConfig"/>
     </event>
 </config>

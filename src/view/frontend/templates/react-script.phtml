@@ -1,25 +1,42 @@
 <?php
 declare(strict_types=1);
 
+use FriendsOfHyva\ReactCheckout\ViewModel\CspNonceProvider;
 use Magento\Framework\Escaper;
 use Magento\Framework\View\Element\Template;
 
 /** @var Template $block */
 /** @var Escaper $escaper */
-$buildJsFile = 'Hyva_ReactCheckout::js/react-checkout.js';
+/** @var CspNonceProvider $cspNonceProvider */
+
+$cspNonceProvider = $block->getData('csp_nonce_provider');
+$buildJsFile = 'FriendsOfHyva_ReactCheckout::js/react-checkout.js';
 ?>
-<script>
+<script nonce="<?= $escaper->escapeHtml($cspNonceProvider->getNonce()) ?>">
+    let reactCheckoutScriptLoaded = false;
+
     function loadReactCartScript () {
+        if (reactCheckoutScriptLoaded) {
+            return;
+        }
+        reactCheckoutScriptLoaded = true;
+
         var scriptTag = 'script';
         var firstScript = document.getElementsByTagName(scriptTag)[0];
         var newScript = document.createElement(scriptTag);
 
         newScript.async = true;
         newScript.defer = true;
-        newScript.type = 'module';
         newScript.src = '<?= $escaper->escapeUrl($block->getViewFileUrl($buildJsFile)); ?>';
 
         firstScript.parentNode.insertBefore(newScript, firstScript);
     }
-    window.addEventListener("private-content-loaded", loadReactCartScript);
+
+    window.addEventListener('private-content-loaded', loadReactCartScript);
+
+    if (document.readyState === 'complete' || document.readyState === 'interactive') {
+        loadReactCartScript();
+    } else {
+        document.addEventListener('DOMContentLoaded', loadReactCartScript);
+    }
 </script>

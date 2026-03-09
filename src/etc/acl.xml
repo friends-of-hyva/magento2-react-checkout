@@ -6,7 +6,7 @@
                 <resource id="Magento_Backend::stores">
                     <resource id="Magento_Backend::stores_settings">
                         <resource id="Magento_Config::config">
-                            <resource id="Hyva_ReactCheckout::config_hyva_react_checkout" title="hyva_react_checkout"/>
+                            <resource id="FriendsOfHyva_ReactCheckout::config_hyva_react_checkout" title="hyva_react_checkout"/>
                         </resource>
                     </resource>
                 </resource>

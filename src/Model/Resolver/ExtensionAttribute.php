@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace Hyva\ReactCheckout\Model\Resolver;
+namespace FriendsOfHyva\ReactCheckout\Model\Resolver;
 
 use Magento\Framework\GraphQl\Config\Element\Field;
 use Magento\Framework\GraphQl\Query\ResolverInterface;

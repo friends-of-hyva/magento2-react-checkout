@@ -1,6 +1,6 @@
 import React from 'react';
 import { get as _get } from 'lodash-es';
-import { InformationCircleIcon } from '@heroicons/react/24/outline';
+import { InfoIcon } from 'lucide-react';
 
 import { Checkbox } from '../../../../code/common/Form';
 import {
@@ -35,7 +35,7 @@ function CheckoutAgreementsForm() {
             )}
           </div>
           <div className="mt-3 ml-2 cursor-pointer">
-            <InformationCircleIcon
+            <InfoIcon
               className="w-4 h-4 text-primary-600"
               onClick={() => setActiveModalId(agreementId)}
             />
@@ -62,7 +62,7 @@ function CheckoutAgreementsForm() {
           </div>
         </div>
         <div className="mt-4 ml-2 cursor-pointer">
-          <InformationCircleIcon
+          <InfoIcon
             className="w-4 h-4 text-primary-600"
             onClick={() => setActiveModalId(agreementId)}
           />

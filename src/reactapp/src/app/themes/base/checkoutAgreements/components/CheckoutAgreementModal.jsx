@@ -1,6 +1,6 @@
 import React from 'react';
 import { get as _get } from 'lodash-es';
-import { CheckBadgeIcon } from '@heroicons/react/24/outline';
+import { BadgeCheckIcon } from 'lucide-react';
 
 import {
   useAgreementAppContext,
@@ -55,7 +55,7 @@ function CheckoutAgreementModal() {
           <div className="px-4 pt-5 pb-4 bg-white sm:p-6 sm:pb-4">
             <div className="sm:flex sm:items-start">
               <div className="flex items-center justify-center flex-shrink-0 w-12 h-12 mx-auto bg-green-100 rounded-full sm:mx-0 sm:h-10 sm:w-10">
-                <CheckBadgeIcon className="w-6 h-6 text-green-600" />
+                <BadgeCheckIcon className="w-6 h-6 text-green-600" />
               </div>
               <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
                 <h3

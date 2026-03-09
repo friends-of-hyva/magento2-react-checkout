@@ -1,5 +1,5 @@
 type Country {
     state_required: Boolean
-    @resolver (class: "\\Hyva\\ReactCheckout\\Model\\Resolver\\ExtensionAttribute")
+    @resolver (class: "\\FriendsOfHyva\\ReactCheckout\\Model\\Resolver\\ExtensionAttribute")
     @doc(description: "Returns `true` for a country if 'State is Required for' is set in admin")
 }

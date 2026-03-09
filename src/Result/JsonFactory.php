@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Hyva\ReactCheckout\Result;
+namespace FriendsOfHyva\ReactCheckout\Result;
 
 use Magento\Framework\ObjectManagerInterface;
 

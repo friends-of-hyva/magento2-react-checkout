@@ -2,7 +2,7 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
     <type name="Magento\Directory\Model\CountryInformationAcquirer">
-        <plugin name="hyva_react_checkout_set_state_required"
-                type="Hyva\ReactCheckout\Plugin\DirectoryModel\SetStateRequired"/>
+        <plugin name="FriendsOfHyva_ReactCheckout::set_state_required"
+                type="FriendsOfHyva\ReactCheckout\Plugin\DirectoryModel\SetStateRequired"/>
     </type>
 </config>

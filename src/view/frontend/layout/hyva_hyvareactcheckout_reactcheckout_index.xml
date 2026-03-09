@@ -2,16 +2,16 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <head>
-        <remove src="Hyva_ReactCheckout::css/styles.css" />
+        <remove src="FriendsOfHyva_ReactCheckout::css/styles.css" />
     </head>
     <body>
-        <referenceBlock name="checkout.scripts" template="Hyva_ReactCheckout::react-script.phtml" />
+        <referenceBlock name="checkout.scripts" template="FriendsOfHyva_ReactCheckout::react-script.phtml" />
         <referenceBlock name="checkout.initiate.hyva-checkout-storage"
-                        template="Hyva_ReactCheckout::initiate-storage.phtml" />
+                        template="FriendsOfHyva_ReactCheckout::initiate-storage.phtml" />
         <referenceContainer name="page.bottom.container">
             <block class="Magento\Theme\Block\Html\Footer"
                    name="copyright"
-                   template="Hyva_ReactCheckout::html/copyright.phtml" />
+                   template="FriendsOfHyva_ReactCheckout::html/copyright.phtml" />
         </referenceContainer>
     </body>
 </page>
